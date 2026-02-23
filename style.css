@@ -1,0 +1,54 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.container {
+    padding: 20px;
+}
+
+/* R05: Responsive Grid */
+.team-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.member-card {
+    background: white;
+    padding: 20px;
+    border-radius: 50%; /* Matching circular design in Figma */
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.member-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.btn, .btn-process {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .team-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
