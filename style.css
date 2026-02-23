@@ -104,3 +104,88 @@ body {
     background-color: #d4edda;
     color: #155724;
 }
+/* Container do Perfil */
+.profile-card {
+    max-width: 700px;
+    margin: 50px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #f0f0f0;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.profile-card h1 {
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.bio-text {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+/* Secção de Skills */
+.skills-section {
+    text-align: left;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.skills-section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #333;
+    border-bottom: 2px solid #007bff;
+    display: inline-block;
+}
+
+.skills-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    background: #007bff;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+/* Links Sociais (R03) */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn-social {
+    padding: 10px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+.btn-github { background-color: #24292e; color: white; }
+.btn-linkedin { background-color: #0077b5; color: white; }
+
+.btn-social:hover { transform: translateY(-3px); }
