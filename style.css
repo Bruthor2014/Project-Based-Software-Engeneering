@@ -1,54 +1,56 @@
-/* Global Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    background-color: #f4f4f4;
-}
+/* Reset básico */
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-.container {
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
     padding: 20px;
 }
 
-/* R05: Responsive Grid */
+.container { max-width: 1000px; margin: 0 auto; text-align: center; }
+
+/* Grid da Homepage */
 .team-grid {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
-    gap: 20px;
-    margin-top: 40px;
+    gap: 30px;
+    margin: 40px 0;
 }
 
 .member-card {
     background: white;
     padding: 20px;
-    border-radius: 50%; /* Matching circular design in Figma */
-    width: 200px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    width: 250px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.member-card img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
+/* FIX: Configuração das Imagens */
+.member-card img, .profile-img {
+    width: 150px;        /* Tamanho fixo */
+    height: 150px;       /* Tamanho fixo */
+    object-fit: cover;   /* Não distorce a imagem */
+    border-radius: 50%;  /* Garante que é um círculo */
+    border: 3px solid #ddd;
+    margin-bottom: 15px;
 }
 
-.btn, .btn-process {
+/* Botões */
+.btn {
     display: inline-block;
-    margin-top: 10px;
     padding: 10px 20px;
-    background-color: #333;
+    background-color: #007bff;
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    transition: background 0.3s;
 }
+.btn:hover { background-color: #0056b3; }
 
-/* Mobile Responsiveness */
-@media (max-width: 600px) {
-    .team-grid {
-        flex-direction: column;
-        align-items: center;
-    }
+/* R05: Responsividade */
+@media (max-width: 768px) {
+    .team-grid { flex-direction: column; align-items: center; }
 }
