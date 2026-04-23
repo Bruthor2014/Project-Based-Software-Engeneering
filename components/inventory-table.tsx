@@ -152,7 +152,7 @@ export function InventoryTable({ initialCordas, tableName }: InventoryTableProps
   }
 
   const handleQuestionnaireSubmit = async () => {
-    if (!questNomePessoa.trim() || !questNomeTuna.trim() || !questMotivo.trim()) {
+    if (!questNomePessoa.trim() || !questMotivo.trim()) {
       setQuestError("Preenche todos os campos")
       return
     }
