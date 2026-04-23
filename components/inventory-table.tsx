@@ -724,11 +724,32 @@ export function InventoryTable({ initialCordas, tableName }: InventoryTableProps
                   <label className="text-xs sm:text-sm font-medium text-foreground mb-1.5 sm:mb-2 block">
                     Quantidade
                   </label>
+
                   <Input
                     type="number"
                     min={1}
+                    inputMode="numeric"
                     value={questQuantidade}
-                    onChange={(e) => setQuestQuantidade(parseInt(e.target.value) || 1)}
+                    onChange={(e) => {
+                      const value = e.target.value;
+
+                      // permite apagar (mobile)
+                      if (value === "") {
+                        setQuestQuantidade("");
+                        return;
+                      }
+
+                      // só números >= 1
+                      const num = parseInt(value);
+                      if (!isNaN(num) && num >= 1) {
+                        setQuestQuantidade(value); // mantém string
+                      }
+                    }}
+                    onBlur={() => {
+                      if (!questQuantidade || parseInt(questQuantidade) < 1) {
+                        setQuestQuantidade("1");
+                      }
+                    }}
                     className="text-base sm:text-sm"
                   />
                 </div>
